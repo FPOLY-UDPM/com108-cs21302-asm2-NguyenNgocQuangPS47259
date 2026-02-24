@@ -1,7 +1,7 @@
 /******************************************************************************
- * Họ và tên: [ĐIỀN TÊN TẠI ĐÂY]
- * MSSV:      [ĐIỀN MSSV TẠI ĐÂY]
- * Lớp:       [ĐIỀN LỚP TẠI ĐÂY]
+ * Họ và tên: [Nguyễn Ngọc Quang]
+ * MSSV:      [PS47259]
+ * Lớp:       [CS21321]
  *****************************************************************************/
 
 // Tạo file asm2.c và hoàn thiện nội dung Assignment từ nội dung file asm1.c
@@ -25,7 +25,11 @@
 #include <math.h>
 #include <stdlib.h>
 #include <time.h>
+
+
 //========= CHỨC NĂNG BONUS 
+
+
 void pauseScreen() {
     printf("\nNhan Enter de quay lai menu...");
     while(getchar() != '\n'); 
@@ -42,21 +46,21 @@ void chucNang1(){
     printf("xin hãy nhập số nguyên cần kiểm tra :");
     scanf("%f",&x);
     if (x==(int)x)
-        {
+    {
         int nguyenTo=0;
         int chinhPhuong=0;
-            if (x==1)
-            {
-                printf("Đây là số chính phương\n");
-            }else if (x<0)
-            {
-                printf("đây là số âm (không xét)\n");
-            }else if (x==0)
-            {
-                printf("đây là số 0\n");
-            }else
-            {
-            // kiểm tra số nguyên tố
+        if (x==1)
+        {
+            printf("Đây là số chính phương\n");
+        }else if (x<0)
+        {
+            printf("đây là số âm (không xét)\n");
+        }else if (x==0)
+        {
+            printf("đây là số 0\n");
+        }else
+        {
+        // kiểm tra số nguyên tố
             for (int i = 2; i < x; i++)
             {
                 if ((int)x%i==0)
@@ -73,23 +77,23 @@ void chucNang1(){
                     chinhPhuong++;
                     break;
                 }
+                }
+            if (nguyenTo==0)
+            {
+                printf("Đây là số nguyên tố\n");
+            }else if (chinhPhuong!=0)
+            {
+                printf("Đây là số chính phương\n");
+            }else
+            {
+                printf("Đây là số nguyên bình thường\n");
             }
-        if (nguyenTo==0)
-        {
-            printf("Đây là số nguyên tố\n");
-        }else if (chinhPhuong!=0)
-        {
-            printf("Đây là số chính phương\n");
-        }else
-        {
-            printf("Đây là số nguyên bình thường\n");
         }
-    }
     }else
-        {
-            printf("đây là số thực\n");
-        }
+    {
+        printf("đây là số thực\n");
     }
+}
 
 
 //======== CHỨC NĂNG 2 : TÌM BỘI CHUNG NHỎ NHẤT, ỨC CHUNG LỚN NHẤT
