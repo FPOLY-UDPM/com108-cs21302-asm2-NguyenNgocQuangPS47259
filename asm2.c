@@ -224,6 +224,7 @@ void chucNang5(){
     {
         soTo[i]=Tien/menhGia[i];
         Tien-=menhGia[i]*soTo[i];
+        
     }
 
     for (int i = 0; i < 9; i++)
